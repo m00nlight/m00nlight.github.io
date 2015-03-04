@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Hello JekyllBootstrap"
+description: ""
+category: 
+tags: []
+---
+{% include JB/setup %}
