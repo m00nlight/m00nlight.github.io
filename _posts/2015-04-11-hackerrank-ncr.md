@@ -11,8 +11,9 @@ tags: [algorithm, hackerrank, number theory]
 
 ## Problem
 
-The statement of this problem is extremely simple, in short, you need to 
-calculate the $$ {n \choose r} \bmod M $$ where M is 142857.
+The problem can be found [here][5]. The statement of this problem is extremely
+simple, in short, you need to calculate the $$ {n \choose r} \bmod M $$ 
+where M is 142857.
 
 
 ## Lucas Theorem
@@ -159,3 +160,4 @@ You can find the whole solution in C++ and Python [here][4].
 [2]: http://en.wikipedia.org/wiki/Wilson%27s_theorem
 [3]: http://en.wikipedia.org/wiki/Chinese_remainder_theorem
 [4]: http://goo.gl/XBrhTM
+[5]: https://www.hackerrank.com/challenges/ncr
