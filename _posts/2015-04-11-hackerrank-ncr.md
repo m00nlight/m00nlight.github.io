@@ -28,8 +28,8 @@ The core idea of using [Lucas theorem][1] to calculate $$ {n \choose r}
 \times P^e $$ where a is relative prime to P. To calculate the representation
 of $$ n! $$, we can group $$ 1 \times 2 \times \cdots \times n $$ of P 
 elements each, so it can be expressed as $$ (1 \times 2 \cdots \times (P -1))
-\times P \times ((P+1) \times (P+2) \cdots \times (2P - 1)) \times 2P  
-\cdots $$, so that $$ 1 \times 2 \times \cdots \times (P - 1) $$ is 
+\times P \times ((P+1) $$ $$ \times $$ $$ (P+2) \cdots \times (2P - 1)) \times
+$$ $$ 2P \cdots $$, so that $$ 1 \times 2 \times \cdots \times (P - 1) $$ is 
 relative prime to P, and each group mod P is of the same result.
 
 And then use [Wilson theorem][1] which said that $$ (P - 1)! \equiv -1 
@@ -102,8 +102,8 @@ to calculate largest divisors of $$ n! $$ relative prime to $$ P^a $$.
 
 This time we group $$ 1 \times 2 \cdots \times n $$ into group each has $$P^a$$
 items. We first pre calculate the array `facts[0..P^a]`, `facts[i]` is the 
-largest divisors of $$ i! $$ mod $$ P^a $$. Then we can use the same strategy
-when calculate $$ n! \bmod P^a $$. 
+largest divisors of $$ i! $$ relative prime to $$ P^a $$ mod $$ P^a $$. Then 
+we can use the same strategy when calculate $$ n! \bmod P^a $$. 
 
 {% highlight python %}
 def comb_mod2(n, r, m, pa, facts1):
