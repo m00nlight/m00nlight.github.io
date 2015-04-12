@@ -74,6 +74,10 @@ multiple][1] information. The node cover range `[l, r]` is the [least common
 multipler][1] of the elements in `array[l..r]`. So both the update and query
 operator can be done in $$ O(log{n}) $$.
 
+The following is a [least common multiple][1] segment tree example.
+
+![lcm-segment-tree]({{site.url}}/assets/images/lcm-segtree.svg)
+
 Here is the haskell code of the [segment tree][2] structure
 
 {% highlight haskell %}
