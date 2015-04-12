@@ -15,8 +15,8 @@ tags: [functional programming, algorithm, data structure]
 The origin statment of the problem can be found [here][5].
 
 In short, this problem ask you to do two operations on an array, one is to 
-query the [least common multipler][1] of an range [l, r], and another is to 
-update one value of the array. 
+query the [least common multipler(lcm)][1] of an range [l, r], and another is 
+to update one value of the array. 
 
 
 Since the maximum length of the array is $$ 5 \times 10^4 $$, an naive 
@@ -69,14 +69,18 @@ that the running time of the `query` function is actually $$ O(log{n}) $$.
 
 ## Solution
 
-Then the solution is trival. We use an segment tree to store the [least common
-multiple][1] information. The node cover range `[l, r]` is the [least common
-multipler][1] of the elements in `array[l..r]`. So both the update and query
-operator can be done in $$ O(log{n}) $$.
+Then the solution is trival. We use an segment tree to store the lcm 
+information. The node cover range `[l, r]` is the lcm of the elements in 
+`array[l..r]`. So both the update and query operator can be done in $$ 
+O(log{n}) $$.
 
 The following is a [least common multiple][1] segment tree example.
 
 ![lcm-segment-tree]({{site.url}}/assets/images/lcm-segtree.svg)
+
+The circle nodes are leaf nodes and store the numbers in the array, and the 
+rectangle nodes store range lcm information as described in the brackets in
+the node.
 
 Here is the haskell code of the [segment tree][2] structure
 
