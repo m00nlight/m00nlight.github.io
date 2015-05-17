@@ -33,6 +33,19 @@ features sometimes will reduce accuracy of learning algorithm. So you can
 not rely on improving the algorithm performance by thinking more and more
 features.
 
+# Parameter tuning
+
+Machine learning algorithms normally come up with a lot of parameters, and 
+these parameter can affect the performance of the learning algorithm quite
+a lot(up to %2 with my experience on the hackerrank problems).
+
+Although parameter tuning can be done using some automatic methods, it 
+actually requires some insight of the data by our human to find the right 
+tuning direction. And parameter tuning is time consuming, and the parameters 
+tunned on one dataset maybe produce poor result on another dataset, which 
+is true most of the time.
+
+
 # Different learning algorithms have large gaps in result
 
 Even with the same features, different machine learning algorithm can 
