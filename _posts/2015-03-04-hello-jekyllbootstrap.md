@@ -4,6 +4,7 @@ title: "Hello JekyllBootstrap"
 description: ""
 category: blogging
 tags: [blogging]
+excerpt: How to build a blog on github using jekyll from scratch.
 ---
 {% include JB/setup %}
 

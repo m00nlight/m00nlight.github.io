@@ -4,6 +4,8 @@ title: "Why can't the existing machine learning approach bring to us real AI"
 description: "My thought about artificial intelligence"
 category: miscellaneous
 tags: [machine learning, artificial intelligence, thought]
+excerpt: Will machine learning or recently hottest deep learning bring us 
+         true artificial intelligence in the near future? 
 ---
 {% include JB/setup %}
 

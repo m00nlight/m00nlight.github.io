@@ -4,6 +4,7 @@ title: "Hackerrank nCr"
 description: ""
 category: algorithm
 tags: [algorithm, hackerrank, number theory]
+excerpt: Calculate C(n, r) mod m where m is not a prime.
 ---
 {% include JB/setup %}
 
