@@ -4,7 +4,7 @@ title: "HackerRank Minimum Multiple"
 description: "Haskell implementation of segment tree structure"
 category: functional programming
 tags: [functional programming, algorithm, data structure]
-excerpt: Minimum/Maximum range query(RMQ) in functional language style.
+excerpt: Range minimum/maximum query(RMQ) in purely functional style.
 ---
 {% include JB/setup %}
 
