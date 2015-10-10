@@ -5,22 +5,20 @@ tagline: homepage
 ---
 {% include JB/setup %}
 
-    
-## Blog Posts
 
-<ul class="posts">
+<div class="posts">
   {% for post in site.posts %}
-    <li> 
+    <div class="post-entry">
       <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-      <span style="float:right">{{ post.date | date_to_string }}</span> 
+      <span class="date">{{ post.date | date_to_string }}</span> 
       <p>
         {{ post.excerpt }} 
-        <a href="{{ BASE_PATH }}{{ post.url }}"> Read more &raquo;</a>
+        <a class="read-more" href="{{ BASE_PATH }}{{ post.url }}" 
+           style="font-size:11px"> 
+          Read more &raquo;
+        </a>
       </p>
-    </li>
+    </div>
   {% endfor %}
 </ul>
 
-
-[1]: http://en.wikipedia.org/wiki/Sparse_distributed_memory
-[2]: http://en.wikipedia.org/wiki/Fractal
