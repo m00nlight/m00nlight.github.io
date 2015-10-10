@@ -7,7 +7,7 @@ tags: [blogging]
 ---
 {% include JB/setup %}
 
-Read Read [Jekyll Quick Start][3] for quickly set up a blog on github using
+Read [Jekyll Quick Start][3] for quickly set up a blog on github using
 [jekyllbootstrap][1].
 
 # JB made blogging simple
