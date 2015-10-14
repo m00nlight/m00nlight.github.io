@@ -60,25 +60,30 @@ not only the simple summation of every individuals.
 # Behaviours of complexity system
 
 Complexity system normally have several kind of behaviour in common. Here are
-just four normally observed behaviour in complexity system.
+just four normally observed behaviours in complexity system.
 
-1. *Self-organization* : Ants, birds, fireflies etc are some famous example of
++ *Self-organization* : Ants, birds, fireflies etc are some famous example of
 this kind of behaviour. The system as a whole can show unbelievable intelligence
 with every individuals follow **very very simple rules**.
-2. *Chaotic behaviour* : Maybe the most famous one is [butterfly effect][6].
-3. *Fat-tailed behaviour* : Stock market bubbles and crashes as an example, 
++ *Chaotic behaviour* : Maybe the most famous one is [butterfly effect][6].
++ *Fat-tailed behaviour* : Stock market bubbles and crashes as an example, 
 we assume the [market is efficient][7], but actually, the market's fluctations
 seldom fit the beautiful bell-curve normal distribution. I will write a 
 seperate post about this topic in the future.
-4. *Adaptive interaction* : Agents in the system modify their strategies in 
++ *Adaptive interaction* : Agents in the system modify their strategies in 
 diverse way.
 
+
+We will not explain every behaviour here in details, since it will be out of 
+the scope of this article. But just to give some high level ideas of complexity
+system.
 
 # Why are they choosed?
 
 Take [fractals][8] as an example, consider the [Koch Curve][9] for partitular,
 we can make induction of the length of the curve as the following formula:
-$$ L_n = \frac{4}{3} * L_{n - 1} = {\frac{4}{3}}^{n - 1} * L_1 $$
+
+$$ L_n = \frac{4}{3} * L_{n - 1} = (\frac{4}{3})^{n - 1} * L_1 $$
 
 So we can make induction to show that as n tends to infinity, the length of 
 the curve aslo tends to infinity, although all the curve is in a bounded area.
