@@ -6,7 +6,7 @@ category: complexity system
 tags: [complexity system, thought, fractal, chaos]
 excerpt: There are a lot of emergence phenomena in our everyday's life. All 
          the amazing things are sometimes beyond our scope of congnition. 
-         I always doubt in some sense, the God maybe a complexity system 
+         I always doubt in some sense, the God is perhaps a complexity system 
          specialist, since we can find so many clues in our daily life.
 ---
 {% include JB/setup %}
