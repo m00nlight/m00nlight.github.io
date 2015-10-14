@@ -3,7 +3,7 @@ layout: post
 title: "Is God a complexity system specialist?"
 description: ""
 category: complexity system
-tags: [complexity system, thought]
+tags: [complexity system, thought, fractal, chaos]
 excerpt: There are a lot of emergence phenomena in our everyday's life. All 
          the amazing things are sometimes beyond our scope of congnition. 
          I always doubt in some sense, the God maybe a complexity system 
@@ -68,9 +68,55 @@ with every individuals follow **very very simple rules**.
 2. *Chaotic behaviour* : Maybe the most famous one is [butterfly effect][6].
 3. *Fat-tailed behaviour* : Stock market bubbles and crashes as an example, 
 we assume the [market is efficient][7], but actually, the market's fluctations
-seldom fit the beautiful bell-curve normal distribution.
+seldom fit the beautiful bell-curve normal distribution. I will write a 
+seperate post about this topic in the future.
 4. *Adaptive interaction* : Agents in the system modify their strategies in 
 diverse way.
+
+
+# Why are they choosed?
+
+Take [fractals][8] as an example, consider the [Koch Curve][9] for partitular,
+we can make induction of the length of the curve as the following formula:
+$$ L_n = \frac{4}{3} * L_{n - 1} = {\frac{4}{3}}^{n - 1} * L_1 $$
+
+So we can make induction to show that as n tends to infinity, the length of 
+the curve aslo tends to infinity, although all the curve is in a bounded area.
+This is a extremely efficient way to organize complexity structure to make use
+of the space. Hence we can find enormously example of self similar or fractal
+structure in our daily life, coach line, surface of mountain, tree branch, 
+broccoli, lung lobe and more and more, you name it.
+
+![Koch Curve]({{site.url}}/assets/images/Von_Koch_curve.gif)
+
+All these observation inspire me to look at problems in a new perspective. 
+Just think about human neuros, they may be also follow the principle of 
+*emergence*, every neuro play with a very simple rules, but thousand millions
+of neuros can produce extremely phenomena which we still can not understand.
+
+Some other clues which indicate that human brain actually does not work in 
+an [artificial neural network][10] style include that human brain is very energy
+saving, although brain is actually the most expensive organ in our body, it 
+only cost about 400-500 calories. For comparison, [Google Brain][11] project, 
+which is said to mimic the brain of human, but actually can only do very basic 
+thing of human like image classification, use 16,000 computers, and consume 
+about 600KW. Can you image an brain cost so much? If every brain cost so much 
+power, [emission reduction][12] should just be a joke, since everyone will cost 
+much much more power than a car :).
+
+
+# Conclusion
+
+I am always amazed by how clever and ingenious God create the world. He must be
+a extremely good complexity system expertise.
+
+We have a long way to go on the way to the achievement of artificial 
+intelligence. It is a hard way, which need the combination of a lot of different
+disciplines like biology, phyics, math, complexity system, computer science and
+even philosophy. I don't believe just to make machine learning more and more 
+accurate itself is enough to lead us through this difficult path.
+
+
 
 
 [1]: https://en.wikipedia.org/wiki/Emergence
@@ -80,3 +126,8 @@ diverse way.
 [5]: https://en.wikipedia.org/wiki/Diamond
 [6]: https://en.wikipedia.org/wiki/Butterfly_effect
 [7]: https://en.wikipedia.org/wiki/Efficient-market_hypothesis
+[8]: https://en.wikipedia.org/wiki/Fractal
+[9]: https://en.wikipedia.org/wiki/Koch_snowflake
+[10]: https://en.wikipedia.org/wiki/Artificial_neural_network
+[11]: https://en.wikipedia.org/wiki/Google_Brain
+[12]: http://www3.epa.gov/climatechange/reducing-emissions.html
