@@ -3,7 +3,7 @@ layout: post
 title: "Is God a complexity system specialist?"
 description: ""
 category: complexity system
-tags: [complexity system, thought, fractal, chaos]
+tags: [complexity system, thought, fractal, chaos, artificial intelligence]
 excerpt: There are a lot of emergence phenomena in our everyday's life. All 
          the amazing things are sometimes beyond our scope of congnition. 
          I always doubt in some sense, the God is perhaps a complexity system 
@@ -12,7 +12,7 @@ excerpt: There are a lot of emergence phenomena in our everyday's life. All
 {% include JB/setup %}
 
 
-Look at the shcoking beautiful snow fakes image as bellow, are you amazed by
+Look at the shcoking beautiful snow fakes images as bellow, are you amazed by
 how can the nature produce such things?
 
 ![Snow flakes]({{site.url}}/assets/images/Snowflakes.jpg)
@@ -46,8 +46,8 @@ why there are so many materials with only very few basic elements?
 
 Further,think about the carbon-based molecules like [graphite][4] and 
 [diamond][5], with the same basic element, only with a different structure, 
-the diamond is one of the most hard materials on the earth while the graphite 
-is one of the soft one.
+the diamond is one of the hardest materials on the earth while the graphite 
+is one of the softest one.
 
 
 ![Diamond vs Graphite]({{site.url}}/assets/images/diamond_vs_graphite.jpeg)
@@ -55,7 +55,7 @@ is one of the soft one.
 Many scientists have done a lot of research of such things, and showed that 
 *emergence* can be actually achieved by leting the individuals follow very 
 simple rules. So in simple terms, *emergence phenomena* means the whole is 
-not only the simple summation of every individuals.
+**not only the simple summation** of every individuals.
 
 # Behaviours of complexity system
 
@@ -65,7 +65,8 @@ just four normally observed behaviours in complexity system.
 + *Self-organization* : Ants, birds, fireflies etc are some famous example of
 this kind of behaviour. The system as a whole can show unbelievable intelligence
 with every individuals follow **very very simple rules**.
-+ *Chaotic behaviour* : Maybe the most famous one is [butterfly effect][6].
++ *Chaotic behaviour* : Means the system is initial conditions sensentive. 
+The most popular term is [butterfly effect][6].
 + *Fat-tailed behaviour* : Stock market bubbles and crashes as an example, 
 we assume the [market is efficient][7], but actually, the market's fluctations
 seldom fit the beautiful bell-curve normal distribution. I will write a 
@@ -96,7 +97,7 @@ broccoli, lung lobe and more and more, you name it.
 
 All these observation inspire me to look at problems in a new perspective. 
 Just think about human neuros, they may be also follow the principle of 
-*emergence*, every neuro play with a very simple rules, but thousand millions
+*emergence*, every neuro play with  very simple rules, but hundreds billion
 of neuros can produce extremely phenomena which we still can not understand.
 
 Some other clues which indicate that human brain actually does not work in 
@@ -104,7 +105,7 @@ an [artificial neural network][10] style include that human brain is very energy
 saving, although brain is actually the most expensive organ in our body, it 
 only cost about 400-500 calories. For comparison, [Google Brain][11] project, 
 which is said to mimic the brain of human, but actually can only do very basic 
-thing of human like image classification, use 16,000 computers, and consume 
+things of human like image classification, use 16,000 computers, and consume 
 about 600KW. Can you image an brain cost so much? If every brain cost so much 
 power, [emission reduction][12] should just be a joke, since everyone will cost 
 much much more power than a car :).
