@@ -15,14 +15,14 @@ excerpt: There are a lot of emergence phenomena in our everyday's life. All
 Look at the shcoking beautiful snow fakes images as bellow, are you amazed by
 how can the nature produce such things?
 
-![Snow flakes]({{site.url}}/assets/images/Snowflakes.jpg)
+{% include i.html i="assets/images/Snowflakes.jpg" c="Snowflakes(Wiki)" %}
 
 Or maybe look at amazing plants as follow, can you think how God produce
 this from scratch?
 
-![Fractal broccoli]({{site.url}}/assets/images/broccoli.jpg) 
+{% include i.html i="assets/images/broccoli.jpg" c="Broccoli(Wiki)" %}
 
-![Fractal sunflower]({{site.url}}/assets/images/sunflower.jpg)
+{% include i.html i="assets/images/sunflower.jpg" c="Sunflower(Wiki)" %}
 
 But the answer may be simpler than you think. Because all these are some form
 of complexity system.
@@ -42,15 +42,18 @@ us. Like the [flocking behaviour of birds][2], [schooling of fish][3] etc.
 Consider the following periodic table as an example, have you ever wonder 
 why there are so many materials with only very few basic elements? 
 
-![Periodic table]({{site.url}}/assets/images/Periodic_table.svg)
+
+{% include i.html i="assets/images/Periodic_table.svg" c="Periodic(Wiki)" %}
+
+
 
 Further,think about the carbon-based molecules like [graphite][4] and 
 [diamond][5], with the same basic element, only with a different structure, 
 the diamond is one of the hardest materials on the earth while the graphite 
 is one of the softest one.
 
+{% include i.html i="assets/images/d_vs_g.jpeg" c="Diamond vs Graphite(Wiki)" %}
 
-![Diamond vs Graphite]({{site.url}}/assets/images/diamond_vs_graphite.jpeg)
 
 Many scientists have done a lot of research of such things, and showed that 
 *emergence* can be actually achieved by leting the individuals follow very 
@@ -93,7 +96,7 @@ of the space. Hence we can find enormously example of self similar or fractal
 structure in our daily life, coach line, surface of mountain, tree branch, 
 broccoli, lung lobe and more and more, you name it.
 
-![Koch Curve]({{site.url}}/assets/images/Von_Koch_curve.gif)
+{% include i.html i="assets/images/Koch_curve.gif" c="Koch Curve(Wiki)" %}
 
 All these observation inspire me to look at problems in a new perspective. 
 Just think about human neuros, they may be also follow the principle of 
