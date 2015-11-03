@@ -118,7 +118,7 @@ post.
 
 The basic idea is to use different range span n to calculate the value of 
 $$ R(n) $$ and $$ S(n) $$, and calculate the log of the expect value, do the 
-same of $$ n \over 2, n \over 4, \ldots, n \over 2^m $$ for the same. And 
+same of $$ {n \over 2}, {n \over 4}, \ldots, {n \over 2^m} $$ for the same. And 
 plot the point in a two dimensional plan, and do a linear model fit to 
 the data, the slope of the line will be the [Hurst Exponent][3].
 
