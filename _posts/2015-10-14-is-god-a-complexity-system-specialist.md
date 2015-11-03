@@ -121,7 +121,7 @@ a extremely good complexity system expertise.
 
 We have a long way to go on the way to the achievement of artificial 
 intelligence. It is a hard way, which need the combination of a lot of different
-disciplines like biology, phyics, math, complexity system, computer science and
+disciplines like biology, physics, math, complexity system, computer science and
 even philosophy. I don't believe just to make machine learning more and more 
 accurate itself is enough to lead us through this difficult path.
 
