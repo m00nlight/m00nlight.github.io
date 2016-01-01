@@ -132,6 +132,29 @@ n_factorial(N, F) :-
     n_factorial(N1, F1).
 {% endhighlight %}
 
+Some calling example of `n_factorial` as follow:
+
+{% highlight prolog %}
+?- n_factorial(5, F).
+F = 120 ;
+false.
+
+?- n_factorial(10, F).
+F = 3628800 ;
+false.
+
+?- n_factorial(N, 120).
+N = 5 ;
+false.
+
+?- n_factorial(N, 720).
+N = 6 ;
+false.
+
+?- n_factorial(N, 721).
+false.
+{% endhighlight %}
+
 ## Facing the problem of non-termination
 
 If you're a scrupulous programmer, you will notice that the constraint version
