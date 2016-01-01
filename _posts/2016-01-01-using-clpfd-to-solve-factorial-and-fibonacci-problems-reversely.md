@@ -311,7 +311,8 @@ ignored by most people. But we should also notice that there is no free meal
 either, we should be very careful to add additional constrains as in the above
 example showed, but it is still a very very powerful paradigm for general 
 relational programming which deserve to be known. It will extremely broaden 
-one's view of programming in general.
+one's view of programming in general. You could find the whole experiment 
+program from [miscellaneous-code/fact-and-fib-in-clpfd][14].
 
 
 
@@ -329,3 +330,4 @@ one's view of programming in general.
 [11]: https://github.com/miniKanren
 [12]: http://minikanren.org/
 [13]: http://stackoverflow.com/questions/21216105/prevent-backtracking-after-first-solution-to-fibonacci-pair
+[14]: https://github.com/m00nlight/miscellaneous-code/tree/master/fact-and-fib-in-clpfd
