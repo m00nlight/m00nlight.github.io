@@ -245,5 +245,5 @@ You can find the whole program on [clpb-nonogram/solution][10].
 [6]: https://en.wikipedia.org/wiki/Regular_expression
 [7]: https://en.wikipedia.org/wiki/Definite_clause_grammar
 [8]: http://stackoverflow.com/questions/13866727/converting-a-small-regular-expression-to-a-dcg
-[9]: http://www.pathwayslms.com/swipltuts/dcg/
+[9]: https://www.metalevel.at/prolog/dcg.html
 [10]: https://github.com/m00nlight/miscellaneous-code/blob/master/clpb-nonogram/solution.pl
