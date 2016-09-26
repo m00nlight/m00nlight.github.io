@@ -10,15 +10,14 @@ tagline: homepage
   {% for post in site.posts %}
     <div class="post-entry">
       <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-      <span class="date">{{ post.date | date_to_string }}</span> 
+      <span class="date">{{ post.date | date_to_string }}</span>
       <p>
-        {{ post.excerpt }} 
-        <a class="read-more" href="{{ BASE_PATH }}{{ post.url }}" 
-           style="font-size:11px"> 
+        {{ post.excerpt }}
+        <a class="read-more" href="{{ BASE_PATH }}{{ post.url }}"
+           style="font-size:11px">
           Read more &raquo;
         </a>
       </p>
     </div>
   {% endfor %}
-</ul>
-
+</div>
