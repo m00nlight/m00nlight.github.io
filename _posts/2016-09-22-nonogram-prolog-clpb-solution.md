@@ -167,9 +167,11 @@ same_col_length([H|T], N) :-
 nonogram(Rows, RowCs, ColCs) :-
     length(RowCs, RowLen), length(Rows, RowLen),
     length(ColCs, ColLen), same_col_length(Rows, ColLen),
+    maplist(constraint_2_regex, RowCs, RowCsRegex),
+    maplist(constraint_2_regex, ColCs, ColCsRegex),
     transpose(Rows, Cols),
-    maplist(sat_row, Rows, RowCs),
-    maplist(sat_row, Cols, ColCs).
+    maplist(sat_row, Rows, RowCsRegex),
+    maplist(sat_row, Cols, ColCsRegex).
 {% endhighlight %}
 
 And here are some simple test cases.
@@ -234,7 +236,7 @@ Here I don't intent to make the program the most efficient to solve the
 problem, I just want to show how elegant the problem can be solved in the
 constraint programming paradigm.
 
-You can find the whole program on [clpb-nonogram/solution][10].
+You can find the whole program on [clpb-nonogram][10].
 
 
 [1]: https://en.wikipedia.org/wiki/Nonogram
@@ -246,4 +248,4 @@ You can find the whole program on [clpb-nonogram/solution][10].
 [7]: https://en.wikipedia.org/wiki/Definite_clause_grammar
 [8]: http://stackoverflow.com/questions/13866727/converting-a-small-regular-expression-to-a-dcg
 [9]: https://www.metalevel.at/prolog/dcg.html
-[10]: https://github.com/m00nlight/miscellaneous-code/blob/master/clpb-nonogram/solution.pl
+[10]: https://github.com/m00nlight/miscellaneous-code/tree/master/clpb-nonogram
