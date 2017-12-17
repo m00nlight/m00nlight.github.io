@@ -163,10 +163,6 @@ let delete p =
             PathNode(left', up', right', curValue, (List.rev left) @ right)
 ```
 
-```cpp
-int a = 64;
-```
-
 But since depend on the structure we use in a imperative way, we also has
 several operations which require $$O(length)$$ time complexity, where length is
 the number of children node of one element. We already achieve the same time
