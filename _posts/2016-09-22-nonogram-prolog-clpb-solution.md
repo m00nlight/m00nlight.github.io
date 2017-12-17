@@ -45,7 +45,7 @@ regular expression engine. The following code is of some minor modification
 of this [stackoverflow answer][8]. For users who are not familiar with
 Prolog's DCG, please refer to [some tutorial here][9].
 
-{% highlight prolog %}
+```prolog
 :- op(100, xf, *).
 :- op(100, xf, +).
 :- op(100, xfy, **).
@@ -73,23 +73,23 @@ regex(repeat(R, N)) -->
     regex(D).
 
 regex(R**N) --> regex(range(R, N, N)).
-{% endhighlight %}
+```
 
 
 Use the above code, we can match a list with a regular expression like
 
-{% highlight prolog %}
+```prolog
 ?- phrase(regex([0*,1**3, 0+, 1**2, 0+]), [1, 1, 1, 0, 1, 1]).
 false.
 
 ?- phrase(regex([0*,1**3, 0+, 1**2, 0+]), [1, 1, 1, 0, 1, 1, 0]).
 true ;
 false.
-{% endhighlight %}
+```
 
 Or generate all sequences which satisfy the regular expression like
 
-{% highlight prolog %}
+```prolog
 ?- use_module(library(clpb)).
 true.
 
@@ -98,13 +98,13 @@ Row = [1, 1, 1, 0, 1, 1, 0, 0] ;
 Row = [1, 1, 1, 0, 0, 1, 1, 0] ;
 Row = [0, 1, 1, 1, 0, 1, 1, 0] ;
 false.
-{% endhighlight %}
+```
 
 Now we can biuld the constraints construction of the problem. The following
 code will change one row or column's constraint to the regular expression
 form.
 
-{% highlight prolog %}
+```prolog
 constraint_2_regex_tail([], [0*]) :- !.
 constraint_2_regex_tail([H|T], [0+, 1**H | TRes]) :-
     constraint_2_regex_tail(T, TRes).
@@ -113,20 +113,20 @@ constraint_2_regex([], [0*]) :- !.
 constraint_2_regex([X], [0*, 1**X, 0*]) :- !.
 constraint_2_regex([H|T], [0*, 1**H| RegexTail]) :-
     constraint_2_regex_tail(T, RegexTail).
-{% endhighlight %}
+```
 
 Using the previous `[3,2,2]` as an example, the `constraint_2_regex` will
 generate something like
 
-{% highlight prolog %}
+```prolog
 ?- constraint_2_regex([3, 2, 2], Res).
 Res = [0*, 1**3, + 0, 1**2, + 0, 1**2, 0*].
-{% endhighlight %}
+```
 
 I don't know why there is some problem of display `0+` as `+ 0`, but it
 is actually the correct regular expression.
 
-{% highlight prolog %}
+```prolog
 ?- constraint_2_regex([3, 2, 2], Regex), length(Row, 9), phrase(regex(Regex), Row),
 |    labeling(Row), writeln(Row).
 [1,1,1,0,1,1,0,1,1]
@@ -149,11 +149,11 @@ Row = [1, 1, 1, 0, 0, 1, 1, 0, 1|...] ;
 Regex = [0*, 1**3, + 0, 1**2, + 0, 1**2, 0*],
 Row = [0, 1, 1, 1, 0, 1, 1, 0, 1|...] ;
 false.
-{% endhighlight %}
+```
 
 Finally, here are the part to solve the nonogram.
 
-{% highlight prolog %}
+```prolog
 sat_row(Row, Cs) :-
     constraint_2_regex(Cs, RegCs),
     phrase(regex(RegCs), Row),
@@ -172,11 +172,11 @@ nonogram(Rows, RowCs, ColCs) :-
     transpose(Rows, Cols),
     maplist(sat_row, Rows, RowCsRegex),
     maplist(sat_row, Cols, ColCsRegex).
-{% endhighlight %}
+```
 
 And here are some simple test cases.
 
-{% highlight prolog %}
+```prolog
 test(1, _,
      [[], [3], [1, 1], [3], [1]],
      [[], [], [4], [1, 1], [3]]).
@@ -188,11 +188,11 @@ test(2, _,
 test(3, _,
      [[], [4], [6], [2, 2], [2, 2], [6], [4], [2], [2], [2], []],
      [[], [9], [9], [2, 2], [2, 2], [4], [4], []]).
-{% endhighlight %}
+```
 
 You can test it like
 
-{% highlight prolog %}
+```prolog
 ?- test(N, Rows, RowCs, ColCs), nonogram(Rows, RowCs, ColCs), maplist(writeln, Rows).
 [0,0,0,0,0]
 [0,0,1,1,1]
@@ -210,10 +210,11 @@ ColCs = [[], [], [4], [1, 1], [3]] ;
 [0,1,1,1,1,1]
 [0,0,0,1,0,0]
 N = 2,
-Rows = [[0, 1, 1, 1, 1, 0], [0, 1, 0, 0, 1, 0], [0, 1, 1, 1, 1, 0], [0, 1, 0, 0, 0|...], [0, 1, 1, 1|...], [0, 0, 0|...]],
+Rows = [[0, 1, 1, 1, 1, 0], [0, 1, 0, 0, 1, 0], [0, 1, 1, 1, 1, 0], [0, 1, 0, 0, 0|...]\
+[0, 1, 1, 1|...], [0, 0, 0|...]],
 RowCs = [[4], [1, 1], [4], [1], [5], [1]],
 ColCs = [[], [5], [1, 1, 1], [1, 1, 2], [3, 1], [1]] ;
-{% endhighlight %}
+```
 
 # Some though on efficiency
 

@@ -18,10 +18,10 @@ it can run some programs backward, which means that given the output of the
 program, it can yields all the input satisfies the relation. One famous example
 is the `append` function of list. 
 
-{% highlight prolog %}
+```prolog
 my_append([], Ys, Ys).
 my_append([X|Xs], Ys, [X|Zs]) :- my_append(Xs, Ys, Zs).
-{% endhighlight %}
+```
 
 The above prolog program give the relation that `my_append(Xs, Ys, Zs)` which
 means that list `Xs` append list `Ys` the result is list `Zs`. In a functional
@@ -31,7 +31,7 @@ programming, we can actually call the relation with the output, and get all the
 input. For example, the following is calling `my_append(Xs, Ys, [1,2,3,4])` 
 which means for what `Xs` and `Ys`, their concatenation is list `[1,2,3,4]`.
 
-{% highlight prolog %}
+```prolog
 ?- my_append(Xs, Ys, [1,2,3,4]).
 Xs = [],
 Ys = [1, 2, 3, 4] ;
@@ -44,7 +44,7 @@ Ys = [4] ;
 Xs = [1, 2, 3, 4],
 Ys = [] ;
 false.
-{% endhighlight %}
+```
 
 We can see that the program automatically return us all the possible answer for
 `Xs` and `Ys` whose concatenation is `[1,2,3,4]`. 
@@ -69,16 +69,16 @@ run program backward, sadly, logic programming can not be used directly in
 this scenario since the program of `fact` as follow do use the value of 
 `N` in the body. 
 
-{% highlight prolog %}
+```prolog
 fact(0, 1).
 fact(N, F) :- 
     N >= 1, N1 is N - 1,
     fact(N1, F1),
     F is N * F1.
-{% endhighlight %}
+```
 
 
-{% highlight prolog %}
+```prolog
 ?- fact(5, F).
 F = 120 ;
 false.
@@ -90,7 +90,7 @@ false.
 ?- fact(N, 120).
 ERROR: >=/2: Arguments are not sufficiently instantiated
 ?- 
-{% endhighlight %}
+```
 
 The above example shows that when we call `fact(N, 120)`, the prolog system 
 will complain that `>=` arguments are not sufficiently instantiated. It is 
@@ -123,18 +123,18 @@ in constraint programming are encourage to read [Peter J. Stucky's][8] book
 Here I just show you how use "clp(fd)" library in swi-prolog to make a general
 relation of factorial in prolog.
 
-{% highlight prolog %}
+```prolog
 :- use_module(library(clpfd)).
 
 n_factorial(0, 1).
 n_factorial(N, F) :-
     N #> 0, N1 #= N - 1, F #= N * F1,
     n_factorial(N1, F1).
-{% endhighlight %}
+```
 
 Some calling example of `n_factorial` as follow:
 
-{% highlight prolog %}
+```prolog
 ?- n_factorial(5, F).
 F = 120 ;
 false.
@@ -153,7 +153,7 @@ false.
 
 ?- n_factorial(N, 721).
 false.
-{% endhighlight %}
+```
 
 ## Facing the problem of non-termination
 
@@ -163,7 +163,7 @@ last. It is done deliberately to avoid non-termination problem. If we reorder
 the last two clause to the same order as in `fact`, we get the program as 
 follow:
 
-{% highlight prolog %}
+```prolog
 :- use_module(library(clpfd)).
 
 % non termination after reordering.
@@ -172,7 +172,7 @@ n_factorial2(N, F) :-
     N #> 0, N1 #= N - 1,
     n_factorial2(N1, F1),
     F #= N * F1.
-{% endhighlight %}
+```
 
 When we call `n_factorial2(N, 120)`, after finding the first solution `N = 5`, 
 the program fall into a infinite search. 
@@ -208,7 +208,7 @@ the fibonacci number problem.
 
 Here is the fibonacci number problem in prolog.
 
-{% highlight prolog %}
+```prolog
 n_fib1(0, 1).
 n_fib1(1, 1).
 n_fib1(N, F) :-
@@ -216,12 +216,12 @@ n_fib1(N, F) :-
     n_fib1(N1, F1),
     n_fib1(N2, F2),
     F is F1 + F2.
-{% endhighlight %}
+```
 
 Sadly, translate the above program to clp(fd) does not produce a convergent 
 program.
 
-{% highlight prolog %}
+```prolog
 :- use_module(library(clpfd)).
 
 % non termination due to infinite solution to constrain of F #= F1 + F2.
@@ -231,7 +231,7 @@ n_fib1(N, F) :-
     N #> 1, N1 #= N - 1, N2 #= N - 2,
     F #= F1 + F2,
     n_fib1(N1, F1), n_fib1(N2, F2).
-{% endhighlight %}
+```
 
 The problem is clearly discussed in a excellent [stackoverflow answer][13], in
 short, the problem is caused by the fact constrain `F #= F1 + F2` has infinite
@@ -244,7 +244,7 @@ The right way is as said in the [stackoverflow answer][13], add the constriants
 programming and constraint programming, make them before the recursive call. 
 So the final work solution is as follow:
 
-{% highlight prolog %}
+```prolog
 :- use_module(library(clpfd)).
 
 % terminate add constrains of F1 #> 0, F2 #> 0.
@@ -265,19 +265,19 @@ false.
 
 ?- n_fib4(N, 15).
 false.
-{% endhighlight %}
+```
 
 But the above problem has efficiency problem since naive fibonacci algorithm 
 runs in exponent time complexity. This can be showed from the running time 
 in prolog.
 
-{% highlight prolog %}
+```prolog
 ?- time(n_fib4(N, 55)).
 % 196,914 inferences, 0.036 CPU in 0.036 seconds (100% CPU, 5402819 Lips)
 N = 9 ;
 % 6,662,749 inferences, 1.319 CPU in 1.463 seconds (90% CPU, 5051567 Lips)
 false.
-{% endhighlight %}
+```
 
 We can see when call `n_fib4(N, 55)` it will yield the first answer in around 
 0.04s, and will finish search for other answer in around 1.3s. If this is the
@@ -289,16 +289,16 @@ In functional programming, we can add another argument to make it a dynamic
 like algorithm for fibonacci number, so that it can run in linear time as the
 following code in haskell
 
-{% highlight haskell %}
+```haskell
 fib n = go n 0 1
     where
     go n a b | n==0 = a
              | otherwise = go (n-1) b (a+b)
-{% endhighlight %}
+```
 
 We can use the same idea in constraint logic programming here. 
 
-{% highlight prolog %}
+```prolog
 :- use_module(library(clpfd)).
 
 % accerlate n_fib4
@@ -309,12 +309,12 @@ n_fib6(N, F, F1) :-
     F #= F1 + F2,
     F1 #> 0, F2 #> 0,
     n_fib6(N1, F1, F2).
-{% endhighlight %}
+```
 
 Now we can call the following example and it's much much faster than the naive
 recursive version.
 
-{% highlight prolog %}
+```prolog
 ?- time(n_fib6(N, 377, F2)).
 % 77,602 inferences, 0.014 CPU in 0.014 seconds (100% CPU, 5468345 Lips)
 N = 13,
@@ -325,7 +325,7 @@ false.
 ?- time(n_fib6(N, 378, F2)).
 % 80,399 inferences, 0.015 CPU in 0.015 seconds (100% CPU, 5325256 Lips)
 false.
-{% endhighlight %}
+```
 
 # Conclusion
 

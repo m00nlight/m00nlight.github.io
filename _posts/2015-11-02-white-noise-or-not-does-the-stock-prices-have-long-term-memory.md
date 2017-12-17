@@ -124,7 +124,7 @@ the data, the slope of the line will be the [Hurst Exponent][3].
 
 Here is the pesudo code:
 
-{% highlight python %}
+```python
 def hurst_expoent(xs):
     def hurst_r(xs):
         m = mean(xs)
@@ -151,7 +151,7 @@ def hurst_expoent(xs):
         n = n // 2
 
     linear_model_fit(line_points)
-{% endhighlight %}
+```
 
 I build an interactive demo in [Mathematica][7] to explore the result. You can
 try an online version by clicking [here][8]. 

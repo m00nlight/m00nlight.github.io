@@ -8,7 +8,7 @@ description: ""
 
 # My interests
 
-{% highlight prolog %}
+```prolog
 is_functional(X) :-
     member(X, [scheme, racket, sml, haskell, scala, erlang, common_lisp,
            scala, mathematica, fsharp, mozart_oz, r, elisp]).
@@ -34,8 +34,7 @@ am_i_a_fan_of_declarative_programming :-
     is_functional(A), i_like(A), i_learned(A),
     is_logical(B), i_like(B), i_learned(B).
 %% => true
-
-{% endhighlight %}
+```
 
 # My network
 

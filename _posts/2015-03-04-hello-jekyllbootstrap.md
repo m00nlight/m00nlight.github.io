@@ -22,17 +22,16 @@ First, make sure you [upgrade to the default markdown kramdown][2] of github
 pages, then add the fowllowing to your jekyllbootstrap theme's `default.html` 
 page in `_include/theme/YOUR_THEME` directory
 
-{% highlight javascript %}
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/\
-MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-{% endhighlight %}
+```javascript
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+```
 
 Now you can use TeX syntax to type in math symbols in your blog. For example,
 the following snippe of code will be rendered in TeX
 
-{% highlight latex %}
+```tex
 $$\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6} $$
-{% endhighlight %}
+```
 
 $$\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6} $$
 

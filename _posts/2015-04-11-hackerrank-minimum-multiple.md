@@ -4,7 +4,7 @@ title: "HackerRank Minimum Multiple"
 description: "Haskell implementation of segment tree structure"
 category: functional programming
 tags: [functional programming, algorithm, data structure]
-excerpt: Range minimum/maximum query(RMQ) in purely functional style.
+excerpt: The functional tree structure is a very similar purely functional 
 ---
 {% include JB/setup %}
 
@@ -39,7 +39,7 @@ value, and the internal node store the result of a range `[l, r]`.
 
 The pseudo codes of query and update are:
 
-{% highlight text %}
+```
 function query(f, l, r, root):
 	if l <= root.left and root.right <= r:
 		return root.val
@@ -60,8 +60,7 @@ function update(f, idx, newVal, root):
 	else:
 		root.val = f(newVal, root.val)
 		update(f, idx, newVal, root.rightChild)
-
-{% endhighlight %}
+```
 
 At first glance, the running time of `query` is not explicit $$ O(log{n}) $$. 
 But you can find the proof from the [stackoverflow answer][3], which shows 
@@ -85,7 +84,7 @@ the node.
 
 Here is the haskell code of the [segment tree][2] structure
 
-{% highlight haskell %}
+```haskell
 data SegTree =
     Node {
       val                   :: Integer
@@ -129,7 +128,7 @@ update idx newVal root
     where
       lChild = update idx newVal $ leftChild root
       rChild = update idx newVal $ rightChild root
-{% endhighlight %}
+```
 
 In fact, since [haskell][4] is an pure functional languages, it should
 be a little trival to do programming related with states in it. But since
@@ -140,7 +139,7 @@ use purely functional style to do the `query` and `update` operators using
 
 The following code is related with solving the problem.
 
-{% highlight haskell %}
+```haskell
 processQueries
   :: [(Char, Int, Int)] -> SegTree -> [Integer] -> [Integer]
 processQueries [] _ acc = reverse acc
@@ -159,7 +158,7 @@ solve n arr queries = processQueries queries tree []
       tree = foldl' (\ root (idx, v) -> update idx v root)
              (initSegTree n)
              (zip [0..] arr)
-{% endhighlight %}
+```
 
 The only thing one should notice is that the depth limit of stack on 
 [HackerRank][6] is quite small. So we need to avoid too deep recursive

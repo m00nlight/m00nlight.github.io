@@ -75,7 +75,7 @@ The first step is to use higher order functions as methods in an object and
 store the variables of object in a mutable association lists as the following
 code.
 
-{% highlight racket %}
+```racket
 #lang racket
 
 (struct object (vars methods))
@@ -116,7 +116,7 @@ code.
                         (let ([x (send self 'get-x args)]
                               [y (send self 'get-y args)])
                           (sqrt (+ (* x x) (* y y)))))))))
-{% endhighlight %}
+```
 
 In the above code, every object is a structure with two fields, `vars` is to 
 use to store the variables of a object and `methods` is used to store methods
@@ -132,14 +132,14 @@ function for every objects.
 Finally we can define a `send` function which send the object a message. We
 predefined an object `p1` for test purpose. We can use `p1` like as follows
 
-{% highlight racket %}
+```racket
 > (send p1 'set-x 3)
 > (send p1 'set-y 4)
 > (send p1 'get-x)
 3
 > (send p1 'dist-to-origin)
 5
-{% endhighlight %}
+```
 
 ## Transform to more OO like style using closure and dispatch
 
@@ -161,7 +161,7 @@ the book [Let over lambda][6].
 
 We can change the `p1` definition to the following style. 
 
-{% highlight racket %}
+```racket
 (define ptx
   (let ([obj (object
               (list (mcons 'x 0)
@@ -182,7 +182,7 @@ We can change the `p1` definition to the following style.
             [(equal? method 'set-y) (send obj 'set-y args)]
             [(equal? method 'dist-to-origin) (send obj 'dist-to-origin args)]
             [else (error "undefined method for object ~a" method)]))))
-{% endhighlight %}
+```
 
 We can see from the above code, now the object is stored in a `let` binding, 
 and we make `ptx` a function and dispatch different methods to the proper 
@@ -190,7 +190,7 @@ and we make `ptx` a function and dispatch different methods to the proper
 
 Then we can now call the object using the following syntax. 
 
-{% highlight racket %}
+```racket
 > (ptx 'get-x)
 0
 > (ptx 'set-x 3)
@@ -199,7 +199,7 @@ Then we can now call the object using the following syntax.
 3
 > (ptx 'dist-to-origin)
 5
-{% endhighlight %}
+```
 
 ## Add initialization function
 
@@ -211,7 +211,7 @@ principle.
 We can abstract the creation of object as something like `initialize` method
 in ruby or `__init__` in python. The following are the code.
 
-{% highlight racket %}
+```racket
 (define (new-point [x 0] [y 0])
   (let ([obj (object
               (list (mcons 'x x)
@@ -232,12 +232,12 @@ in ruby or `__init__` in python. The following are the code.
             [(equal? method 'set-y) (send obj 'set-y args)]
             [(equal? method 'dist-to-origin) (send obj 'dist-to-origin args)]
             [else (error "undefined method for object:" method)]))))
-{% endhighlight %}
+```
 
 Now we can use `new-point` to create as many as points as I like. It is the 
 same as `new` objects in Ruby or Python. 
 
-{% highlight racket %}
+```racket
 > (define p1 (new-point 3 4))
 > (define p2 (new-point 5 12))
 > (p1 'get-x)
@@ -248,7 +248,7 @@ same as `new` objects in Ruby or Python.
 5
 > (p2 'dist-to-origin)
 13
-{% endhighlight %}
+```
 
 ## A simple attempt to implement inheritance
 
@@ -263,7 +263,7 @@ not find the proper method to execute, it may be contained in the ancestors'
 objects, we need to find them on the chains to the root. The changed code 
 is here. 
 
-{% highlight racket %}
+```racket
 (struct object (vars methods father))
 
 (define (send obj msg args)
@@ -316,14 +316,14 @@ is here.
             [(equal? method 'set-z) (send obj 'set-z args)]
             [(equal? method 'dist-to-origin) (send obj 'dist-to-origin args)]
             [else (error "unknow method call" method)]))))
-{% endhighlight %}
+```
 
 Now we can create two init function, one for `point` and another for 
 `point-3d`. The `point-3d` inherit from the `point` class. We can see 
 it from the code. And the `dist-to-origin` procedure is something like 
 overwritten method in OO languages. 
 
-{% highlight racket %}
+```racket
 > (define p3d (new-point-3d 2 2 2))
 > (p3d 'get-x)
 2
@@ -333,12 +333,12 @@ overwritten method in OO languages.
 3.4641016151377544
 > (sqrt (+ 4 4 4))
 3.4641016151377544
-{% endhighlight %}
+```
 
 Now the only thing we lack is some syntax sugar to change the domain specific 
 OO language to a more familiar OO style like(Ruby code):
 
-{% highlight ruby %}
+```ruby
 # encocing: utf-8
 
 class Point
@@ -372,7 +372,7 @@ end
 
 ptx = Point.new(3, 4)
 puts ptx.dist_to_origin
-{% endhighlight %}
+```
 
 But it is not so important since they're just syntax differences on the 
 surface.

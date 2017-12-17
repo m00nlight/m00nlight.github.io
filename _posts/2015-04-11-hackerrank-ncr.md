@@ -37,7 +37,7 @@ And then use [Wilson theorem][1] which said that $$ (P - 1)! \equiv -1
 (\bmod P) $$. We can finally get the solution to calculate $$ n! = a \times 
 P^e $$. The python code as follow:
 
-{% highlight python %}
+```python
 def fact_mod(n, p, facts):
     """
     Type :: (Int, Int, [Int]) -> (Int, Int)
@@ -57,7 +57,7 @@ def fact_mod(n, p, facts):
 
     if (n // p % 2 != 0): return (a * (p - facts[n % p]) % p, e)
     return (a * facts[n % p] % p, e)
-{% endhighlight %}
+```
 
 Notice the tricky in the last two line of the above code. Since $$ (P - 1)! =
 1 (\bmod P) $$, so if the number of group is even, then the result is just 
@@ -70,7 +70,7 @@ $$ (n - k)! = a_3 \times P^{e_3} $$. Then if $$ e_1 > e_2 + e_3 $$, $$ {n
 \choose k} $$ must be zero mod P, otherwise, the result should be `a1 * modinv
 (a2 * a3, P)` where `modinv` is the modulo inverse function.
 
-{% highlight python %}
+```python
 def comb_mod(n, k, p):
     """
     Type :: (Int, Int, Int) -> Int
@@ -92,7 +92,7 @@ def comb_mod(n, k, p):
         return 0
     else:
         return a1 * modinv(a2 * a3 % p, p) % p
-{% endhighlight %}
+```
 
 
 ## Generalize to this Problem
@@ -106,7 +106,7 @@ items. We first pre calculate the array `facts[0..P^a]`, `facts[i]` is the
 largest divisors of $$ i! $$ relative prime to $$ P^a $$ mod $$ P^a $$. Then 
 we can use the same strategy when calculate $$ n! \bmod P^a $$. 
 
-{% highlight python %}
+```python
 def comb_mod2(n, r, m, pa, facts1):
     """
     Type :: (Int, Int, Int) -> Int
@@ -141,7 +141,7 @@ def comb_mod2(n, r, m, pa, facts1):
     m3 = n_fact_fact(n - r)
 
     return (p ** b) * m1 * modinv_table[(m2, m)] * modinv_table[(m3, m)] % m
-{% endhighlight %}
+```
 
 The above code is just to calculate $$ {n \choose r} \bmod P^a $$. The
 function `n_fact_fact` is just to calculate the largest divisor of $$ n! $$ 
