@@ -54,6 +54,11 @@ It is very clear from the visualization that the mid north part of US has a
 a much higher rate of murder like criminal, while the south east part of US
 like California has much higher rate of motor vehicle theft.
 
+This tool does not intend to eliminate all kind of work in exploring a dataset,
+something like data cleaning, make the dataset a proper format is still need to
+be done by people. But at least it can help me to quick explore the dataset and
+help me to identify what need some further analysis for more deep insight.
+
 [1]: https://www.tableau.com
 [2]: https://www.qlik.com/us/
 [3]: https://archive.ics.uci.edu/ml/datasets/abalone
