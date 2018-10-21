@@ -26,36 +26,36 @@ Time flies, Opera change to follow the Chrome browser kernel after version 12.
 It also make the email client a standalone program, but sadly they also
 [stop the support of this great software][1]. I would not argue whether it is
 correct or wise decision for [Opera][8] to follow this path, since in my
-opinion,popularity is neither good or bad, it is just popularity. As a pioneer
+opinion, popularity is neither good or bad, it is just popularity. As a pioneer
 in browser software industry, [Opera][8] left us a lot of innovations like tab
-view, speed dial, mouse gesture etc. And unlike other company, which use patent
+view, speed dial, mouse gesture etc. And unlike other company, which use patents
 to make law suit against others, [Opera][8] only use patent as a protection for
-themselves, but do not [abuse patents to stop innovation][9]. [Opera][8] mail
+themselves, but do not [abuse patents to stop innovation][9]. [Opera][8] may
 fail one day, but all these are the valuable assets [Opera][8] left for the
 world.
 
 Although [Opera Mail][1] has this and that problems for opera mails, but I still
 like this software so much that I wish they could continue to improve it. 
-So for example, the following is an example a lot of mailing list with only 
-a random number as prefix but are actually the same mailing list.
+So for example, the following is an example a lot of mailing lists with only 
+a random number as prefix but are actually the same one.
 
 {% include i.html i="assets/images/mailinglist_with_random_number2.png" c="Mailing list with random number"%}
 
-Although this is quite a easy problem to fix, I also report problem to them but got
+Although this is quite a easy problem to fix, I also report this to them but got
 no reply. And it seems that the software is indeed dead in his life cycle. Sigh :(.
 
 As a long time [Blackberry](10) fan, I also tried the the mail client on the 
-Blackberry OS 10 system, I would say it is quite a good platform and email
+Blackberry OS 10 system, I would say it is quite a excellent platform and email
 client, everytime when message get into my inbox, it is pushed to my blackberry
 client almost instantly. I think it is really good for people who wish to 
 stay online forever, and would like to get notification as soon as possible,
 but it is just not my flavor. And [Blackberry](10) is smirking at the 
 [iPhone X's](11) "there's never been a better way" to interact with your phone.
 At least it is there back to 2013 when [Blackberry](10) release the [Q10][12]
-device. Not to mention all later innovation like keyboard as trackpad, swipe
+device. Not to mention all later innovations like keyboard as trackpad, swipe
 to select and delete text in other [Blackberry](10) devices. As [Opera][8],
 [Blackberry](10) also almost fails in the mobile world, but it also does not 
-means either their product or software are bad or not, maybe just a lack of 
+mean either their product or software are bad or not, maybe just a lack of 
 lucky.
 
 {% include i.html i="assets/images/Blackberry-swipe-gesture.png" c="Blackberry Q10 gestures." url="https://help.blackberry.com/en/blackberry-q10/current/help/mes1335535802053.html" %}
@@ -73,15 +73,16 @@ some cross platform approach like [Xamarin][3] to do this project, since it
 seems to be promising to just write one software but can run on multiple
 platforms. But I found that the [Xamarin][3] is extremely buggy and most of my
 time are spending on searching the strange error message just because I update
-the framework. And even the sample project offered with [Visual Studio][4] does
-not work. In the end, the [Xamarin][3] is like an [white elephant][5] to the
-world of developing application. It may be some showcase to build some toy like
-project which can run in multiple platforms,but if you want to build any real
+the framework. And even the sample projects offered with [Visual Studio][4] does
+not work. In the end, the [Xamarin][3] is like an [white elephant][5] to me for
+developing application. It may have some showcases to build some toy like
+project which can run in multiple platforms, but if you want to build any real
 project, it will give you a lot of troubles.
 
-Then I just decided to stick to the [Android][2] platform. So I started learning
-the basic block of building android application. Start to do the project bit by
-bit, solve any problem during this procedure.
+Then I just decided to stick to the [Android][2] platform. Although it also has
+problem and bugs behind, but the experience is much much moer smooth than [Xamarin][3].
+So I started learning the basic block of building android application. Start to do 
+the project bit by bit, solve any problem during this procedure.
 
 After months of work in my spare time, I am proud to announce the initial
 release of [OMail][6] and [OMail Pro][7]. It is an email client on [Android][2]
@@ -90,10 +91,11 @@ which have the some of the most important feature as [Opera Mail][1], like
 - Automatically mailing list management
 - Account View
 - Attachment View
+- Customized control of what to sync for your email on your phone
 - etc.
 
-It does not have the feature like custom tag in [Opera Mail][1], because the
-custom tag can only store locally, but I would like everything can be
+It does not have the feature like customized tagging in [Opera Mail][1], 
+because the custom tags can only store locally, but I would like everything can be
 synchronized between all email clients. So I implement star as the only tagging
 method for message since it is supported by most of the mail providers.
 
