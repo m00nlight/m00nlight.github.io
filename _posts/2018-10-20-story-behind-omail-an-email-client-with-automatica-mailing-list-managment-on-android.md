@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Story behind OMail: An email client with automatica mailing list managment on Android"
+title: "Story behind OMail: An email client with automatic mailing list management on Android"
 description: ""
 category: Android
 tags: [Android, app, email]
