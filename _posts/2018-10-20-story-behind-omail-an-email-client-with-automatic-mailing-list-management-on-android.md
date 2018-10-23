@@ -118,12 +118,7 @@ every time you find you miss some filter, you're welcome to give [OMail][6]
 or [OMail Pro][7] a try, and also you're welcome to give feedback for any
 problem or future improvements of these application.
 
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=zWoh1Dqq6-Y">
-  <img src="https://img.youtube.com/vi/zWoh1Dqq6-Y/0.jpg" alt="IMAGE ALT TEXT">
-  </a>
-  <h5>Initial release video. Click to view</h5>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zWoh1Dqq6-Y" frameborder="0" allowfullscreen></iframe>
 
 [1]: https://en.wikipedia.org/wiki/Opera_Mail
 [2]: https://www.android.com/
