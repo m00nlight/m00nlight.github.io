@@ -73,7 +73,7 @@ killer_sudoku(Rows, Splits, Sums) :-
 ```
 
 So we only need to pass the additional cages' information and their corresponding
-sum information, and build the constraint relation for them. It is only aroud 10 
+sum information, and build the constraint relation for them. It is only around 10 
 lines more code than the standard [Sudoku][3] solver, and we can already solve 
 every killer sudoku in Prolog now. 
 
@@ -85,7 +85,7 @@ So I do some test to solve various [Killer Sudoku][4] I found from online, and s
 how well the solver can tackle the problems.
 
 For the problem from wiki, it solve the problem instantly, but for some harder 
-problems, it may take minitues even hours to solve. 
+problems, it may take minutes even hours to solve. 
 
 ```prolog
 ?- problem(wiki, Rows, Splits, Sums), killer_sudoku(Rows, Splits, Sums), 
@@ -103,12 +103,12 @@ problems, it may take minitues even hours to solve.
 ```
 
 Difficulty level 10/10 [Killer Sudoku][4] from the [daily killer sudoku website][8]. It toke 
-aroud 2 minutes to find the sulotion, and take aroud 6 minutes to prove that there is on other
+around 2 minutes to find the solution, and take around 6 minutes to prove that there is on other
 solutions. Since it is marked as the most difficult [Killer Sudoku][4] on the website, I think
-the speed is already quite faste. On the website, it said the average time to solve the problem
-is 44 mins, but it may because you can use hint for the task for simple problem(difficult level
-1/10), the average time is also around 40 mins, so it is likely either all the people who try 
-to solve the difficult one are expert at solving [Killer Sudoku][4] or the time is not accuratly
+the speed is already quite fast. On the website, it said the average time to solve the problem
+is 44 minutes, but it may because you can use hint for the task for simple problem(difficult level
+1/10), the average time is also around 40 minutes, so it is likely either all the people who try 
+to solve the difficult one are expert at solving [Killer Sudoku][4] or the time is not actually
 reflected the difficult level of the problem(like people want to use hint when they stuck).
 
 
@@ -132,14 +132,14 @@ false.
 ```
 
 Then I coincidentally encountered a page said that there is a [most difficult 19 cages Killer Sudoku][9]
-in the world. Althougt I do not think there is a objective standard for difficulty, but it seems to 
+in the world. Although I do not think there is a objective standard for difficulty, but it seems to 
 be quite difficult since every cage is not limited to one block which make simple strategy for
 solving [Killer Sudoku][4] not working. And in the post, the author said it take him six days to solve
 the problem. So I decide to give it a try to the constraint solver.
 
 {% include i.html i="assets/images/most_difficult_killer_sudoku_19_region.jpg" c="Most difficult killer sudoku" url="http://www.sudokufans.org.cn/forums/topic/289/" %}
 
-It acutally take quite long to solve the problem(around 12h to get the solution). But since except the 
+It actually take quite long to solve the problem(around 12h to get the solution). But since except the 
 definition constraints of the problem, I do not use any other advanced strategy, I think the speed is 
 already satisfactory.
 
@@ -205,7 +205,7 @@ greater_killer_sudoku(Rows, Splits, Sums, Compares) :-
 ```
 
 We define another predicate called `compare_constrain` which take the regions information
-and two cages' comparison relation. It is something like `[a, b]-less` whice means cage
+and two cages' comparison relation. It is something like `[a, b]-less` which means cage
 a's sum is less than cage b's sum. And we just add this constraints to the solver. All 
 the remaining are exactly the same as [Killer Sudoku][4]'s solver.
 
@@ -242,10 +242,10 @@ So the intention of this post is not to bulid the fastest [Killer Sudoku][4] and
 [Greater Killer Sudoku][6] solver, just want to show how we can just add a bunch 
 of lines of code to the standard [Sudoku][3] solver in [clpfd][1] to get a general 
 solver which can solve [Killer Sudoku][4] and [Greater Killer Sudoku][6] in a 
-quite reasnoable time and to show that [clpfd][1] in [SWI-Prolog][2] is actually 
+quite reasonable time and to show that [clpfd][1] in [SWI-Prolog][2] is actually 
 a very good domain specific language at solving such puzzles over integer domain.
-And the expressivness of [clpfd][1] make the solution very straightforward and 
-less bug prone. 
+And the expressiveness of [clpfd][1] make the solution very straightforward and
+less bug prone.
 
 So in general, with only around 20 lines of more code, we can solve two famous extension
 of normal [Sudoku][3] problem in [Prolog][2], and the code is concise and express

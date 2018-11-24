@@ -61,7 +61,7 @@ For example, in one dimension, you can imagine the structure as an array or list
 the current focus to the left, right, add/insert items to the left, right etc.
 
 In a tree form, we can think this as a directory tree in file system, we can go
-parent directory, goto nth child of current directory, and the current focus is
+parent directory, go to nth child of current directory, and the current focus is
 just the current directory at any time.
 
 Let us think first how to solve this problem in one dimension in a functional

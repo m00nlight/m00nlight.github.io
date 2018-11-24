@@ -100,7 +100,7 @@ Row = [0, 1, 1, 1, 0, 1, 1, 0] ;
 false.
 ```
 
-Now we can biuld the constraints construction of the problem. The following
+Now we can build the constraints construction of the problem. The following
 code will change one row or column's constraint to the regular expression
 form.
 
@@ -220,7 +220,7 @@ ColCs = [[], [5], [1, 1, 1], [1, 1, 2], [3, 1], [1]] ;
 
 Although it is really elegant to solve this problem in [SWI-Prolog's clpb][3]
 library, the problem is not extremely efficient. For example, the third test
-will take around 10 mins to find several answers on my desktop with an I7
+will take around 10 minutes to find several answers on my desktop with an I7
 processor. But since this problem is an NP problem, it is not that bad(the
 third problem should be of time complexity of 2^88). But we should know
 that in practice,

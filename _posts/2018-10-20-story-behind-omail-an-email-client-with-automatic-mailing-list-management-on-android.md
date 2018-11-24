@@ -13,7 +13,7 @@ excerpt: This post describe the story behind why I build the OMail App on Androi
 I still remember the old days when [Opera browser][8] is a kind of Emacs in
 browser world. You have a mail client integrated which you can manage your
 emails, there is a IRC client which you can chat over different chat rooms.
-Also the Emacs fans can use emacs shortcuts in Opera, which is great if you
+Also the Emacs fans can use Emacs shortcuts in Opera, which is great if you
 are a user of Emacs editor, since most of your favorite shortcut works out
 of box, and you can use it either in browser, email editing or IRC chat, and
 you don't need to install any extra plugin for that.
@@ -46,13 +46,13 @@ no reply. And it seems that the software is indeed dead in his life cycle. Sigh 
 
 As a long time [Blackberry](10) fan, I also tried the the mail client on the 
 Blackberry OS 10 system, I would say it is quite a excellent platform and email
-client, everytime when message get into my inbox, it is pushed to my blackberry
+client, every time when message get into my inbox, it is pushed to my blackberry
 client almost instantly. I think it is really good for people who wish to 
 stay online forever, and would like to get notification as soon as possible,
 but it is just not my flavor. And [Blackberry](10) is smirking at the 
 [iPhone X's](11) "there's never been a better way" to interact with your phone.
 At least it is there back to 2013 when [Blackberry](10) release the [Q10][12]
-device. Not to mention all later innovations like keyboard as trackpad, swipe
+device. Not to mention all later innovations like keyboard as track pad, swipe
 to select and delete text in other [Blackberry](10) devices. As [Opera][8],
 [Blackberry](10) also almost fails in the mobile world, but it also does not 
 mean either their product or software are bad or not, maybe just a lack of 
@@ -100,8 +100,7 @@ synchronized between all email clients. So I implement star as the only tagging
 method for message since it is supported by most of the mail providers.
 
 It also do not do full sync like what [Opera Mail][1] do in the desktop, but
-does incremental sync, which may let some old emails in different state(like y
-ou move a very old message to another folder). But it offer the user customized
+does incremental sync, which may let some old emails in different state(like you move a very old message to another folder). But it offer the user customized
 sync which can let the user to sync message during an time range.
 
 The [OMail][6] & [OMail Pro][7] also will prefer to save plain text email
