@@ -16,7 +16,7 @@ from the [world income inequality database][1] and the
 
 <div class='tableauPlaceholder' id='viz1543085256294' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HH&#47;HHNFH5726&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;HHNFH5726' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HH&#47;HHNFH5726&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><script type='text/javascript'>var divElement = document.getElementById('viz1543085256294'); var vizElement = divElement.getElementsByTagName('object')[0];vizElement.style.width='750px';vizElement.style.height='1050px';var scriptElement = document.createElement('script');scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
 
-And I was amazed to find some insight through this process. The above is the tableau
+And I was amazed to find some insights through this process. The above is the tableau
 interactive notebook you can play with. Here I will just list the main findings of the 
 data:
 
@@ -78,7 +78,7 @@ happen, and I believe all the thing like [*Quantitative Easing*][3] just aggrava
 inequality of the world.
 
 This is an interactive notebook and you can play with the data by selecting different
-filters. And I find it is normally more useful to use visualization to show interesting phenomena than plain numbers. If you find some other interesting, you're welcome 
+filters. And I find it is normally more useful to use visualization to show interesting phenomena than plain numbers. If you find some other interesting things, you're welcome
 to comment after the post :).
 
 
