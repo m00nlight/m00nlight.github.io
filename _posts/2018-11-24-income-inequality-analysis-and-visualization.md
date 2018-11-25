@@ -73,9 +73,9 @@ happen, and I believe all the thing like [Quantitative Easing][3] just aggravate
 inequality of the world.
 
 This is an interactive notebook and you can play with the data by selecting different
-filters. And I find it is normally more useful to use data to show interesting phenomena than
-plain numbers. If you find some other interesting, you're welcome to comment after the post
-:).
+filters. And I find it is normally more useful to use visualization to show interesting phenomena than plain numbers. If you find some other interesting, you're welcome 
+to comment after the post :).
+
 
 [1]: https://www.wider.unu.edu/project/wiid-world-income-inequality-database
 [2]: https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-inequality.html
