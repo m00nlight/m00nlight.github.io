@@ -80,7 +80,7 @@ project which can run in multiple platforms, but if you want to build any real
 project, it will give you a lot of troubles.
 
 Then I just decided to stick to the [Android][2] platform. Although it also has
-problem and bugs behind, but the experience is much much moer smooth than [Xamarin][3].
+problem and bugs behind, but the experience is much much more smooth than [Xamarin][3].
 So I started learning the basic block of building android application. Start to do 
 the project bit by bit, solve any problem during this procedure.
 
