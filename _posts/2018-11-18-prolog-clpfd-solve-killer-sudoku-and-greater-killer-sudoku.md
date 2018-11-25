@@ -8,7 +8,7 @@ excerpt: We already see the power to use constraint programming
          to solve logical puzzle like sudoku using SWI-Prolog's 
          clpfd package. In this post, I will show you how you can
          make very small modification to the sudoku solver to solve
-         famous sudoku varients like killer sudoku and greater killer
+         famous sudoku variants like killer sudoku and greater killer
          sudoku.
 ---
 {% include JB/setup %}
@@ -18,13 +18,13 @@ excerpt: We already see the power to use constraint programming
 In the [manual of clpfd][1] of [SWI-Prolog][2], there is already an example of 
 using the [clpfd][1] to solve the puzzle [Sudoku][3]. It really show the power
 of [Prolog][2]'s constraint programming to solve hard problem with a bunch of 
-lines of code. But recently, I find out that there are a lot of varients of 
+lines of code. But recently, I find out that there are a lot of variants of 
 [Sudoku][3]. So I would like to show how can we add very small modification 
 to the [Sudoku][3] solver to solve this problem in [Prolog][2] very easily.
 
 # Killer Sudoku & Greater Killer Sudoku Problem Definition
 
-[Killer Sudoku][4] is a famous varient of standard [Sudoku][3]. In additional
+[Killer Sudoku][4] is a famous variant of standard [Sudoku][3]. In additional
 to the standard [Sudoku][3] rules, a [Killer Sudoku][4] is divided into cages,
 the sum of the numbers in a cages must equal the small number in the left corner, 
 and same number can not appear in a cage more than once. The [Killer Sudoku][4]
@@ -37,7 +37,6 @@ and has sum relation for some of the cages instead of the sum information. An ex
 [Greater Killer Sudoku][6] can be show as the following image from [daily killer sudoku][7].
 
 {% include i.html i="assets/images/Screenshot_greater_killer_sudoku_hard.png" c="Example of Greater Killer Sudoku" url="https://www.dailykillersudoku.com/pdfs/17393.pdf" %}
-
 
 # Solving Killer Sudoku
 
@@ -75,7 +74,7 @@ killer_sudoku(Rows, Splits, Sums) :-
 So we only need to pass the additional cages' information and their corresponding
 sum information, and build the constraint relation for them. It is only around 10 
 lines more code than the standard [Sudoku][3] solver, and we can already solve 
-every killer sudoku in Prolog now. 
+every killer sudoku in Prolog now.
 
 And also we should notice, despite it's name, [Killer Sudoku][4]'s difficult levels
 varies, simple [Killer Sudoku][4] may even be simpler than normal [Sudoku][3], but
@@ -220,8 +219,8 @@ constraint propagation much much larger than normal [Killer Sudoku][4].
 
 
 ```prolog
-?- problem(daily_greater_killer_sudoku_hard, Rows, Splits, Sums), 
-|     greater_killer_sudoku(Rows, Splits, Sums, 
+?- problem(daily_greater_killer_sudoku_hard, Rows, Splits, Sums),
+|     greater_killer_sudoku(Rows, Splits, Sums,
 |        [[a,b]-equal, [j, o]-less, [r, v]-equal, [u, y]-greater, [y, v]-equal]),
 |     append(Rows, Vs), time(label(Vs)), maplist(portray_clause, Rows). 
 % 26,391,594,689 inferences, 17021.320 CPU in 17080.693 seconds (100% CPU, 1550502 Lips)
@@ -238,7 +237,7 @@ constraint propagation much much larger than normal [Killer Sudoku][4].
 
 # Conclusion
 
-So the intention of this post is not to bulid the fastest [Killer Sudoku][4] and
+So the intention of this post is not to build the fastest [Killer Sudoku][4] and
 [Greater Killer Sudoku][6] solver, just want to show how we can just add a bunch 
 of lines of code to the standard [Sudoku][3] solver in [clpfd][1] to get a general 
 solver which can solve [Killer Sudoku][4] and [Greater Killer Sudoku][6] in a 
