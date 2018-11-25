@@ -22,33 +22,38 @@ data:
 
 For US government data:
 
-1. Most age groups' in US, the median & mean income diverge, and the gap is bigger and bigger
+-  Most age groups' in US, the median & mean income diverge, and the gap is bigger and bigger
    as time goes on
-2. For the working males(24 to 65), the median incomes are stagnating since 1970s(inflation
+-  For the working males(24 to 65), the median incomes are stagnating since 1970s(inflation
    adjusted), which means most of the working males don't see actual income increase through
    the last 40 years
-3. The top richest people are richer and richer during the same time. For example, the top 5%
+-  The top richest people are richer and richer during the same time. For example, the top 5%
    people's income percent goes from around 17% in early 1970s to around 22.6% in 2017.
-4. The diverge of the rich and the poor can also be reflected by the gap between mean and
+-  The diverge of the rich and the poor can also be reflected by the gap between mean and
    median income, which means only a few people are much richer than before while the majority
    get barely nothing
-5. There is a big jump for the top 5% people from 1992 to 1993(from 18.6% to 21.0%), I then
+-  There is a big jump for the top 5% people from 1992 to 1993(from 18.6% to 21.0%), I then
    try to find what happened at that time, and it is actually some chaotic period for the
    Clinton administration, which he want to increase tax for rich class, but actually hurt
    the middle class.
-6. Although the average income for all ages(15 and older) increase from $2000 in early
+-  Although the average income for all ages(15 and older) increase from $2000 in early
    1970s to $32,000 in 2017, the actual income(inflation adjusted) only increase from
    $16,000 to around $34,000 in 2017(only doubled instead 15x times)
 
-<br />
+And although I also don't believe the official inflation rate truly reflect the actual
+number of inflation, but even let us take it as it is, I am stilled shocked by how the
+actual income of most people are stagnating over the past 40 years. If you want to know
+more about the inflation information, I recommend you to check the [**Shadow Statics**][4]
+about alternative measure of different economic indicators like inflation, unemployment,
+GDP etc.
 
 For other countries, I also find some interesting points:
 
-1. Within 1991 to 1993, Russia sees a big jump for the GINI index, which is most likely due
+-  Within 1991 to 1993, Russia sees a big jump for the GINI index, which is most likely due
    to the collapse of the Soviet Union.
-2. China was quite equal before the reform and opening(although quite poor at the same time)
-3. Europe is general more equal in income compare to other developed countries
-4. Most countries with high GINI index(greater than 40), the top 20% people will get around
+-  China was quite equal before the reform and opening(although quite poor at the same time)
+-  Europe is general more equal in income compare to other developed countries
+-  Most countries with high GINI index(greater than 40), the top 20% people will get around
    50% income of all people.
 
 Actually, the "richer get richer while poor get poor" can be show in a very simple model
@@ -69,7 +74,7 @@ the running of the model:
 And very interesting, the distribution of the wealth change from like a normal distribution
 at the beginning to right skew and then finally to a exponential like distribution in
 the late phase. So it means in this really simple economic world, income inequality could
-happen, and I believe all the thing like [Quantitative Easing][3] just aggravate the
+happen, and I believe all the thing like [*Quantitative Easing*][3] just aggravate the
 inequality of the world.
 
 This is an interactive notebook and you can play with the data by selecting different
@@ -80,3 +85,4 @@ to comment after the post :).
 [1]: https://www.wider.unu.edu/project/wiid-world-income-inequality-database
 [2]: https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-inequality.html
 [3]: https://en.wikipedia.org/wiki/Quantitative_easing
+[4]: http://www.shadowstats.com/
