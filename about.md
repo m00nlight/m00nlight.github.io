@@ -5,7 +5,6 @@ description: ""
 ---
 {% include JB/setup %}
 
-
 # My interests
 
 ```prolog
@@ -22,13 +21,16 @@ is_oop(X) :-
 i_learned(X) :-
     member(X, [racket, sml, mathematica, fsharp, haskell, scala, common_lisp,
            mozart_oz, latex, chaos, fractal, complexity_system, analytics,
-           algorithm, machine_learning, prolog]).
+           sql, spark, hive, R, clojure, fsharp, android_programming, kotlin,
+           algorithm, machine_learning, prolog, tableau, data_visualization,
+           dvorak_layout, maltron_layout]).
 
 i_like(X) :-
     member(X, [scheme,racket, sml, mathematica, haskell, fsharp, mozart_oz,
            chaos, fractal, prolog, algorithm, competitive_programming,
-           complexity_system,cellular_automata, swimming, music,
-           mini_karen, esperanto, japanese, sparsed_distributed_memory]).
+           complexity_system,cellular_automata, swimming, music, emacs,
+           mini_karen, esperanto, japanese, sparsed_distributed_memory,
+           tableau, data_visualization, maltron_layout]).
 
 am_i_a_fan_of_declarative_programming :-
     is_functional(A), i_like(A), i_learned(A),
@@ -36,24 +38,5 @@ am_i_a_fan_of_declarative_programming :-
 %% => true
 ```
 
-# My network
 
-## Social network
-+ twitter: [@m00nlight223](http://www.twitter.com/m00nlight223)
-+ IRC : m00nlight in various IRC chanels
-
-## Question Answering Site
-+ quora : [Yushi Wang](https://www.quora.com/Yushi-Wang-1)
-
-
-## Coding
-+ github : [m00nlight](https://github.com/m00nlight)
-+ bitbucket : [m00nlight](https://bitbucket.org/m00nlight/)
-
-## Competitive Programming
-+ hackerrank : [m00nlight](https://www.hackerrank.com/m00nlight)
-+ kaggle : [m00nlight](https://www.kaggle.com/m00nlight)
-
-## Software
-+ OMail : [![OMail]({{site.url}}/assets/images/badge_googleplay.png)](https://play.google.com/store/apps/details?id=com.m00nlight.omail)
-+ OMail Pro : [![OMail]({{site.url}}/assets/images/badge_googleplay.png)](https://play.google.com/store/apps/details?id=com.m00nlight.omail_pro)
+{% include JB/comments %}
