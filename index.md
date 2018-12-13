@@ -9,7 +9,7 @@ tagline: homepage
 <div class="posts">
   {% for post in site.posts %}
     <div class="post-entry">
-      <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ BASE_PATH }}{{ post.url }}" style="text-decoration:none">{{ post.title }}</a>
       <span class="date">{{ post.date | date_to_string }}</span>
       <p>
         {{ post.excerpt }}
